@@ -1,3 +1,6 @@
+//TODO: buttons for colormodes, style it, restart button, blacker color mode.
+
+
 //Makes the grid.
 function makeGrid(size){
     //First delete existing grid
@@ -20,7 +23,13 @@ function makeGrid(size){
 }
 //Changes the color of this - triggered with mouseover event
 function changeColor() {
-    this.style.backgroundColor = "grey";
+    if(colorMode === "grey") {
+        this.style.backgroundColor = "grey";
+    }
+    if(colorMode === "rainbow") {
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        this.style.backgroundColor = "#"+randomColor;
+    }
 }
 
 function getSize() {
@@ -43,5 +52,9 @@ function addHoverEvent() {
 }
 //Define the div that holds all the other divs.
 const gridHolder = document.querySelector(".gridHolder");
-//Make square
+//Make default square
 makeGrid(16);
+
+let colorMode = "rainbow";
+
+
