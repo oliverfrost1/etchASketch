@@ -1,0 +1,22 @@
+.gridHolder {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px black;
+    justify-self: center;
+    align-self: center;
+    margin: 0px auto 0px auto;
+}
+
+.gridSquareVertical, .gridSquare {
+    display: flex;
+    flex: 1 0 auto;
+}
+.gridSquare {
+    border: solid 0.1px black;
+}
+
+.gridSquare:hover {
+    background-color: grey;
+}
