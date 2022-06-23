@@ -1,4 +1,4 @@
-//TODO: buttons for colormodes, style it, restart button, blacker color mode.
+//TODO: buttons for colormodes
 
 
 //Makes the grid.
@@ -43,6 +43,12 @@ function getSize() {
     }
 }
 
+function changeColorMode() {
+    if(colorMode == "grey") {colorMode = "rainbow"; return;};
+    if(colorMode == "rainbow") {colorMode = "grey"; return;};
+    console.log("changing color");
+}
+
 //adds hover event to change the color of the elements.
 function addHoverEvent() {
     //Define the squares
@@ -54,7 +60,7 @@ function addHoverEvent() {
 const gridHolder = document.querySelector(".gridHolder");
 //Make default square
 makeGrid(16);
-
-let colorMode = "rainbow";
+//Define button that changes colormode and add event listener.
+let colorMode = "grey";
 
 
