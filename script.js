@@ -1,6 +1,3 @@
-//TODO: buttons for colormodes
-
-
 //Makes the grid.
 function makeGrid(size){
     //First delete existing grid
